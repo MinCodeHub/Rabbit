@@ -1,0 +1,57 @@
+#result-section{
+    display: none;
+}
+.result_img {
+    width: 50%;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.result_img img {
+    width: 100%;
+}
+
+.result_info {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.result_info h1,
+.result_info p {
+    color: aliceblue;
+    text-align: center;
+    line-height: 1;
+}
+
+.share {
+    width: 50%;
+    height: 500px;
+    margin: 0 auto;
+
+}
+
+.share_tit p {
+    margin-top: 40px;
+    margin-left: 30px;
+    color: aliceblue;
+
+}
+
+.SNS_icons {
+    width: 40%;
+    height: auto;
+    margin-left: 70px;
+}
+
+.twitter img,
+.facebook img,
+.kakaotalk img {
+    width: 80px;
+    height: 80px;
+    margin-top: 30px;
+
+}
+
+@media all and (min-width:768px) {}
+
+@media all and (min-width:960px) {}

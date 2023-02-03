@@ -1,0 +1,44 @@
+
+#calc {
+    margin: 50% auto;
+    display : none;
+    opacity: 0;
+}
+.calc-bar{
+    position: relative;
+    box-sizing:border-box;
+    margin:0 auto;
+    margin-top: 100px;
+    width: 80%;
+    height: 40px;
+    background: #fff;
+    border-radius: 12rem;
+   
+}
+.calc-bar p{
+    text-align: center;
+    padding-top: 10px;
+    font-size: large;
+}
+.calc-bar > .calc{
+    position: absolute;
+    top: 0; left:0;
+    width: 0%;
+    height: 100%;
+    background: blue;
+    opacity: 50%;
+    border-radius: 12rem;
+    animation: working 5.5s 2s forwards;
+}
+.wait{
+    text-align: center;
+    padding-top: 10%;
+}
+@media all and (min-width:768px) {
+
+    #calc {
+        margin: 30% auto;
+    }
+}
+@media all and (min-width:1024px) {
+}
