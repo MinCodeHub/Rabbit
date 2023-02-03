@@ -3,6 +3,6 @@
 "나의 플러팅 실력은?" 심리테스트 웹앱
 
 ---
-참고:[김다인](https://dev-dain.tistory.com)  
+reference: [김다인](https://dev-dain.tistory.com)  
 ---
  
