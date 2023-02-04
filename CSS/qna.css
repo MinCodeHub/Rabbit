@@ -3,6 +3,7 @@
    }
     #qna {
         width: 100%;
+        height: 100vh ;
         display: none;
        
     }
@@ -37,15 +38,16 @@
         padding: 20px;
         background: #fff;
         margin: 0 auto;
+        font-size: 1em;
         border-radius: 20px;
     }
 
     .q {
         box-sizing: border-box;
-        margin-top: 10%;
-        margin-bottom: 50px;
+        margin-top: 7%;
+        margin-bottom: 35px;
         font-size: 27.2px;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         text-align: center;
         font-weight: bolder;
         animation: fade-in 0.5s ease-in-out 0.3s forwards;
@@ -54,15 +56,16 @@
 
     .answer {
         width: 80%;
+        font-size: 1em;
         margin: 0 auto;
     }
 
     .a {
-        margin: 20px 10% 0 10%;
+        margin: 10px 10% 0 10%;
         box-sizing: border-box;
         margin-bottom: 40px;
-        font-size: 27.2px;
-        font-size: 1.5rem;
+        font-size: 20px;
+        font-size: 1rem;
         font-weight: bolder;
         cursor: pointer;
     }

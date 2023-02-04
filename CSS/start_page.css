@@ -2,7 +2,6 @@
    #wrap {
        width: 100%;
        max-width: 100%;
-       height: 100vh;
        position: relative;
        overflow: hidden;
        margin-top: 100px;
@@ -11,8 +10,8 @@
    }
 
    body {
-       background: linear-gradient(45deg, Violet, Orange);
-       background-size: cover;
+        background:linear-gradient(45deg, violet, Orange);
+        background-size: cover;
    }
 
    .container {
@@ -27,9 +26,8 @@
        height: 70px;
        position: fixed;
        top: 10px;
-       background: linear-gradient(45deg, Violet, Orange);
+       background:linear-gradient(45deg, violet, Orange);
        opacity:0.8;
-    
        border-radius: 10%;
        z-index: 2;
 
@@ -128,7 +126,9 @@
    .sec-tit {
        font-size: 0.7em;
    }
-
+   label{
+    color: #fff; 
+   }
    .check-name {
        display: inline-block;
        margin: 10px 10%;
@@ -321,7 +321,7 @@
        }
 
        body {
-           background: linear-gradient(45deg, Violet, Orange);
+        background:linear-gradient(45deg, violet, Orange);
 
        }
 
