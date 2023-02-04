@@ -12,6 +12,60 @@ const select = [];
 
 let qIdx = -1;
 
+const calcScore = () =>{
+  let point = 0;
+  for(let i=0; i<ENDPOINT; i++){
+    point+=qnaList[i].a[select[i]].score;
+  }
+  return point;
+}
+const sortResult = (point) => {
+  let num = 0;
+  if (point <= 40) {
+    num = 0;
+  } else if (point <= 60) {
+    num = 1;
+  } else if (point <= 80) {
+    num = 2;
+  } else if (point <= 100) {
+    num = 3;
+  }
+  return num;
+}
+
+const goResult = () => {
+  if (pcMQL.matches) {
+    console.log('PC');
+    wrap.style.marginTop = '150px';
+  } else if (tabletMQL.matches) {
+    console.log('tablet');
+    wrap.style.marginTop = '115px';
+  }
+
+  const result = document.getElementById('result');
+  const point = calcScore();
+  const grade = sortResult(point);
+  const pTitle = document.querySelector('.h1');
+  const res_point = document.querySelector('.point');
+ 
+
+  pTitle.innerHTML = u_name.value + ' 님의 점수는...';
+  
+  setTimeout(() => {
+    header.style.display = 'block';
+    footer.style.display = 'block';
+    result_section.style.display = 'block';
+    header.style.animation =
+      'fade-in 0.3s forwards';
+    footer.style.animation =
+      'fade-in 0.3s forwards';
+    result_section.style.animation =
+      'going-up 0.5s, ' +
+      'fade-in 0.5s forwards';
+  }, 600);
+
+}
+
 const end = () => {
   qna.style.animation = '';
   const interval = setInterval(() => {
@@ -49,7 +103,7 @@ const addAnswer = (answerTxt, idx) => { //선택지 버튼을 생성해주는 �
     const parent = answer.parentNode;
     const children = parent.childNodes;
 
-    for (let i in children - 1) {
+    for (let i in children -1) {
       children[i].disabled = true;
     }
     parent.classList.add('fade-out-5-4');
