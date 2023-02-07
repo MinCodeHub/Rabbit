@@ -14,11 +14,14 @@ let qIdx = -1;
 
 const calcScore = () =>{
   let point = 0;
-  for(let i=0; i<ENDPOINT; i++){
+  for(let i = 0; i < ENDPOINT; i++){
     point+=qnaList[i].a[select[i]].score;
   }
+  console.log(point);
   return point;
 }
+
+
 const sortResult = (point) => {
   let num = 0;
   if (point <= 40) {
@@ -30,8 +33,10 @@ const sortResult = (point) => {
   } else if (point <= 100) {
     num = 3;
   }
+  console.log(num);
   return num;
 }
+
 
 const goResult = () => {
   if (pcMQL.matches) {
@@ -45,11 +50,10 @@ const goResult = () => {
   const result = document.getElementById('result');
   const point = calcScore();
   const grade = sortResult(point);
-  const pTitle = document.querySelector('.h1');
+  const pTitle = document.querySelector('h1');
   const res_point = document.querySelector('.point');
- 
 
-  pTitle.innerHTML = u_name.value + ' 님의 점수는...';
+  pTitle.innerHTML = u_name.value + ' 님의 점수는...'+ point+'입니다.';
   
   setTimeout(() => {
     header.style.display = 'block';
@@ -89,6 +93,7 @@ const end = () => {
     setTimeout(() => {
       calc.style.display = 'none';
       goResult();
+     
     }, 400);
   }, 9000);
 }
@@ -171,6 +176,7 @@ const begin=()=>{
       console.log('tablet');
       wrap.style.marginTop = '30px';
     }
+    console.log(u_name.value);
     goNext();
   }, 2000);
 }
