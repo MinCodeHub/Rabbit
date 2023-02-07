@@ -1,10 +1,30 @@
-#result_section{
+
+
+#result_section {
     display: none;
 }
+
+.result_title {
+    width: 100%;
+    height: auto;
+    margin:10px auto;
+    font-size: 1.5em;
+
+}
+
+.result_title  > p {
+
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    color: aliceblue;
+    margin-bottom: 10px;
+}
+
 .result_img {
-    width: 50%;
-    height: 400px;
-    margin: 0 auto;
+    width: 200px;
+    height: auto;
+    margin: 15px auto;
 }
 
 .result_img img {
@@ -14,44 +34,76 @@
 .result_info {
     width: 50%;
     margin: 0 auto;
+    font-size: 1.5em;
 }
 
 .result_info h1,
 .result_info p {
     color: aliceblue;
     text-align: center;
-    line-height: 1;
+    line-height: 1.5;
+    font-size: 0.7em;
+}
+.result_info h1{
+    margin-bottom: 10px;
+ 
+    font-size: 1em;
 }
 
 .share {
     width: 50%;
-    height: 500px;
     margin: 0 auto;
 
 }
 
 .share_tit p {
     margin-top: 40px;
-    margin-left: 30px;
+    text-align: center;
     color: aliceblue;
 
 }
 
 .SNS_icons {
-    width: 40%;
+    width: 100%;
     height: auto;
-    margin-left: 70px;
+    text-align: center;
 }
-
+.SNS_icons a{
+    margin-left: 15px;
+}
 .twitter img,
 .facebook img,
 .kakaotalk img {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     margin-top: 30px;
 
 }
 
-@media all and (min-width:768px) {}
+@media all and (min-width:768px) {
+    .result_title {
+        width: 90%;
+    }   
+}
 
-@media all and (min-width:960px) {}
+@media all and (min-width:1024px) {
+    .result_title {
+        width: 90%;
+        height: auto;
+        margin:10px auto;
+        font-size: 1.5em;
+    
+    }
+    .result_img {
+        width: 40%;
+        height: auto;
+      text-align: center;
+    }
+    
+    .result_img img {
+        width: 60%;
+    
+    }
+
+  
+}
