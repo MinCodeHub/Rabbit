@@ -1,5 +1,5 @@
 import { qnaList } from "./data.js";
-
+import { infoList } from "./data.js";
 const header = document.getElementById('header'); //header
 const footer = document.getElementById('footer'); //footer
 const qna = document.getElementById('qna'); //qna
@@ -37,6 +37,22 @@ const sortResult = (point) => {
   return num;
 }
 
+function  display_image(src, width, height, alt) {
+  const point = calcScore();
+  const grade = sortResult(point);
+  console.log(point);
+  console.log(grade);
+  const img = document.querySelector('.result_img');
+  var a  = document.createElement("img");
+    a.src = src;
+    a.width = width;
+    a.height = height;
+    a.alt = alt;
+    img.appendChild(a);
+    img.onclick = function(event){
+      alert(alt);
+    }
+}
 
 const goResult = () => {
   if (pcMQL.matches) {
@@ -47,14 +63,30 @@ const goResult = () => {
     wrap.style.marginTop = '115px';
   }
 
-  const result = document.getElementById('result');
+  const result = document.getElementById('result_section');
   const point = calcScore();
   const grade = sortResult(point);
   const pTitle = document.querySelector('h1');
   const res_point = document.querySelector('.point');
+  const sub_title = document.querySelector('.sub_tit');
+  const sub = document.querySelector('.sub');
 
-  pTitle.innerHTML = u_name.value + ' 님의 점수는...'+ point+'입니다.';
-  
+  pTitle.innerHTML = u_name.value + ' 님의 점수는?<br>';
+  res_point.innerHTML =point+'점'
+
+      if(grade == 0){
+        display_image('/images/p_images/lionhead.jpg',200,200,'라이언헤드');
+      }
+      else if(grade == 1){
+        display_image('/images/p_images/lionhead.jpg',200,200,'아메라칸 퍼지롭');  }
+      else if(grade == 2){
+        display_image('/images/p_images/lionhead.jpg',200,200,'홀랜드 롭이어');  }
+      else if(grade == 3){
+        display_image('/images/p_images/lionhead.jpg',200,200,'랙스');  }
+
+  sub_title.innerHTML = infoList[grade].name;
+  sub.innerHTML = infoList[grade].desc;
+
   setTimeout(() => {
     header.style.display = 'block';
     footer.style.display = 'block';
@@ -64,7 +96,6 @@ const goResult = () => {
     footer.style.animation =
       'fade-in 0.3s forwards';
     result_section.style.animation =
-      'going-up 0.5s, ' +
       'fade-in 0.5s forwards';
   }, 600);
 
@@ -76,10 +107,10 @@ const end = () => {
     qna.style.opacity -= 0.1;
     qna.style.transform = 'translateY(-1px)';
   }, 50);
-  setTimeout(() => clearTimeout(interval), 500);
+  setTimeout(() => clearTimeout(interval), 300);//0.5초 후에 interval 함수 호출
   setTimeout(() => qna.style.display = 'none', 500);
   setTimeout(() => {
-    const calc = document.getElementById('calc');
+    const calc = document.getElementById('calc'); //이부분 이상함
     calc.style.display = 'block';
     calc.style.animation =
       'going-up 0.5s forwards, ' +
@@ -88,7 +119,6 @@ const end = () => {
   setTimeout(() => {
     calc.style.animation = '';
     calc.style.animation =
-      'going-left 0.4s forwards, ' +
       'fade-out 0.4s forwards';
     setTimeout(() => {
       calc.style.display = 'none';
