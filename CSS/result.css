@@ -1,24 +1,12 @@
-
-
 #result_section {
     display: none;
 }
 
-.result_title {
+.result_info {
     width: 100%;
     height: auto;
     margin:10px auto;
     font-size: 1.5em;
-
-}
-
-.result_title  > p {
-
-    font-size: 1em;
-    font-weight: bold;
-    text-align: center;
-    color: aliceblue;
-    margin-bottom: 10px;
 }
 
 .result_img {
@@ -31,14 +19,23 @@
     width: 100%;
 }
 
+.a {
+    margin: 10px 10% 0 10%;
+    box-sizing: border-box;
+    margin-bottom: 40px;
+    font-size: 20px;
+    font-size: 1rem;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
 .result_info {
     width: 50%;
     margin: 0 auto;
     font-size: 1.5em;
 }
 
-.result_info h1,
-.result_info p {
+.result_info h1 {
     color: aliceblue;
     text-align: center;
     line-height: 1.5;
@@ -47,7 +44,33 @@
 .result_info h1{
     margin-bottom: 10px;
  
-    font-size: 1em;
+    font-size: 1.3em;
+}
+ .point{
+    width: 100%;
+    text-align: center;
+    height: auto;
+    margin:10px auto;
+    color: aliceblue;
+    font-size: 1.4em;
+}
+.sub_tit{
+    text-align: center;
+    width: 100%;
+    height: auto;
+    margin:10px auto;
+    margin-top: 20px;
+    color: aliceblue;
+    font-size: 0.9em;
+}
+ .sub{
+    width: 100%;
+    height: auto;
+    margin:10px auto;
+    margin-top: 20px;
+    color: aliceblue;
+    font-size: 0.7em;
+    text-align: center;
 }
 
 .share {
