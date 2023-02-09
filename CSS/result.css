@@ -19,6 +19,7 @@
     width: 100%;
 }
 
+
 .a {
     margin: 10px 10% 0 10%;
     box-sizing: border-box;
@@ -81,32 +82,75 @@
 
 .share_tit p {
     margin-top: 40px;
+    font-size:20px;
     text-align: center;
     color: aliceblue;
 
 }
 
-.SNS_icons {
+.SNS_icons{
     width: 100%;
-    height: auto;
     text-align: center;
+
 }
-.SNS_icons a{
+button{
+    margin-top: 20px;
+}
+#facebook img, #twitter img, #kakao img{
+width: 30px;
+height: 30px;
+
+}
+#facebook{
+    margin-left: 0;
+}
+#twitter,  #kakao{
     margin-left: 15px;
 }
-.twitter img,
-.facebook img,
-.kakaotalk img {
-    width: 60px;
-    height: 60px;
-    margin-top: 30px;
 
+.url_share{
+    width: 60%;
+    margin:0 auto;
+    text-align: center;
 }
 
+.url, .returns{
+    width: 150px;
+    height: 50px;
+margin-top: 15px;
+    background-color: aliceblue;
+    border-radius: 5%;
+}
+.url p, .returns p{
+    font-size: 20px;
+}
+.url:hover{
+    background-color: antiquewhite;
+}
+button{
+    background: none;
+}
 @media all and (min-width:768px) {
     .result_title {
         width: 90%;
-    }   
+    }  
+    button{
+        margin-top: 20px;
+    }
+    #facebook img, #twitter img, #kakao img{
+    width: 50px;
+    height: 50px;
+    
+    }
+    #kakao{
+         margin-top:10px;
+    }
+    #facebook{
+        margin-left: 0;
+    }
+    #twitter,  #kakao{
+        margin-left: 30px;
+    }
 }
 
 @media all and (min-width:1024px) {
@@ -118,13 +162,13 @@
     
     }
     .result_img {
-        width: 40%;
+        width: 60%;
         height: auto;
       text-align: center;
     }
     
     .result_img img {
-        width: 60%;
+        width: 100%;
     
     }
 
