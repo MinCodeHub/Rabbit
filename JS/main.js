@@ -1,5 +1,6 @@
 import { qnaList } from "./data.js";
 import { infoList } from "./data.js";
+
 const header = document.getElementById('header'); //header
 const footer = document.getElementById('footer'); //footer
 const qna = document.getElementById('qna'); //qna
