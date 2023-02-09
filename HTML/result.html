@@ -18,7 +18,7 @@
     <link rel="shortcut icon" href="/images/favicon/lion.ico">
     <link rel="apple-touch-icon-precomposed" href="/images/favicon/lion.ico">
     <script src="/js/jquery.min.js"></script>
-    <script src=""></script>
+    <script src="/js/share.js"></script>
     <style>
       
     </style>
@@ -48,12 +48,13 @@
                     <p>친구들에게 공유하기</p>
                 </span>
                 <div class="SNS_icons">
-                    <a href="" class="twitter"><img src="../images/s_images/twitter.png">
-                 </a>
-                    <a href="" class="facebook"><img src="../images/s_images/facebook.png">
-                    </a>
-                    <a href="" class="kakaotalk"><img src="../images/s_images/kakao.png">
-                    </a>
+                    <button id="facebook" onclick="fn_sendFB('facebook');"><img src="/images/s_images/facebook.png" title="페이스북"></button>
+                    <button id="twitter" onclick="fn_sendFB('twitter');"><img src = "/images/s_images/twitter.png" title="트위터"></button>
+                    <button id="kakao" onclick="fn_sendFB('kakao');"><img src ="/images/s_images/kakaotalk.png" title="카카오톡"></button>
+                </div>
+                <div class="url_share">
+                    <button type ="button" class="url"><p>url 복사하기</p></button>
+                    <a href="index.html"><button class="returns"><p>다시하기</p></button></a>
                 </div>
         </section>
         <footer id="footer">
@@ -71,4 +72,5 @@
 
         </footer>
     </div>
+    <script src="/js/share.js" type="module"></script>
 </body>

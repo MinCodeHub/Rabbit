@@ -20,7 +20,7 @@
     <link rel="shortcut icon" href="/images/favicon/lion.ico">
     <link rel="apple-touch-icon-precomposed" href="/images/favicon/lion.ico">
     <script src="/js/jquery.min.js"></script>
-
+    <script src="/js/share.js"></script>
     <style>
 
     </style>
@@ -66,7 +66,6 @@
                 <div class="status"></div>
             </div>
             <div class="q box">
-                Q1. 당신은 플러팅을 즐기십니까?
             </div>
             <div class="answer">
             </div>
@@ -83,13 +82,11 @@
         <section id="result_section" class="container">
           
             <div class="result_info">
-                <h1>OOO님은 플러팅의 장인.</h1>
-                 <p class="point">40점</p> 
+                <h1></h1>
+                 <p class="point"></p> 
                  <div class="result_img"></div>
-                 <p class="sub_tit">겁이 많은 내적관종<br> 라이언헤드</p>
-                <p class="sub"> 상대방이 나를 어떻게 생각할지, 고민거리가 많은 당신..! 
-                    <br> 조금만 더 용기를 내어보세요!
-                    <br> 혹시 몰라요? 이미 당신을 좋아하고 있을지?
+                 <p class="sub_tit"></p>
+                <p class="sub">
                 </p>
             </div>
             <div class="share">
@@ -97,9 +94,13 @@
                     <p>친구들에게 공유하기</p>
                 </span>
                 <div class="SNS_icons">
-                    <a href="" class="twitter"><img src="../images/s_images/twitter.png"></a>
-                    <a href="" class="facebook"><img src="../images/s_images/facebook.png"></a>
-                    <a href="" class="kakaotalk"><img src="../images/s_images/kakao.png"></a>
+                    <button id="facebook" onclick="fn_sendFB('facebook');"><img src="/images/s_images/facebook.png" title="페이스북"></button>
+                    <button id="twitter" onclick="fn_sendFB('twitter');"><img src = "/images/s_images/twitter.png" title="트위터"></button>
+                    <button id="kakao" onclick="fn_sendFB('kakao');"><img src ="/images/s_images/kakaotalk.png" title="카카오톡"></button>
+                </div>
+                <div class="url_share">
+                    <button type ="button" class="url"><p>url 복사하기</p></button>
+                    <a href="index.html"><button class="returns"><p>다시하기</p></button></a>
                 </div>
         </section>
         <footer id="footer">
@@ -118,7 +119,8 @@
         </footer>
 
     </div>
+
     <script src="../js/main.js" type="module"></script>
     <script src="../js/data.js" type="module"></script>
-  
+    <script src="../js/share.js" type="module"></script>
 </body>
