@@ -51,8 +51,24 @@ function  display_image(src, width, height, alt) {
     a.alt = alt;
     img.appendChild(a);
     img.onclick = function(event){
-      alert(alt);
+      var link='';
+      if(grade == 0){
+      link = "https://terms.naver.com/entry.naver?docId=1715548&cid=40942&categoryId=32622";
+      }
+      else if(grade == 1){
+        link = "https://terms.naver.com/entry.naver?docId=1715546&cid=40942&categoryId=32622";
+        }
+      else if(grade == 2){
+        link = "https://terms.naver.com/entry.naver?docId=1978855&cid=42885&categoryId=42885";
+       }
+      else if(grade == 3){
+        link = "https://terms.naver.com/entry.naver?docId=1087985&cid=40942&categoryId=32622"; 
+      }
+      location.href = link;
+      location.replace(link);
+      window.open(link);
     }
+
 }
 
 const goResult = () => {
@@ -76,14 +92,14 @@ const goResult = () => {
   res_point.innerHTML =point+'점'
 
       if(grade == 0){
-        display_image('/images/p_images/lionhead.jpg',200,200,'라이언헤드');
+        display_image('/images/s_images/lionhead.png',200,200,'라이언헤드');
       }
       else if(grade == 1){
-        display_image('/images/p_images/lionhead.jpg',200,200,'아메라칸 퍼지롭');  }
+        display_image('/images/s_images/JerseyWooly.png',200,200,'저지울리');  }
       else if(grade == 2){
-        display_image('/images/p_images/lionhead.jpg',200,200,'홀랜드 롭이어');  }
+        display_image('/images/s_images/holland.png',200,200,'홀랜드 롭이어');  }
       else if(grade == 3){
-        display_image('/images/p_images/lionhead.jpg',200,200,'랙스');  }
+        display_image('/images/s_images/Rex.png',200,200,'랙스');  }
 
   sub_title.innerHTML = infoList[grade].name;
   sub.innerHTML = infoList[grade].desc;
@@ -108,24 +124,27 @@ const end = () => {
     qna.style.opacity -= 0.1;
     qna.style.transform = 'translateY(-1px)';
   }, 50);
-  setTimeout(() => clearTimeout(interval), 300);//0.5초 후에 interval 함수 호출
+  setTimeout(() => clearTimeout(interval), 300);
+  const wrap = document.getElementById('wrap');
+  wrap.style.height = '90vh';//0.5초 후에 interval 함수 호출
   setTimeout(() => qna.style.display = 'none', 500);
+  
   setTimeout(() => {
-    const calc = document.getElementById('calc'); //이부분 이상함
+    const calc = document.getElementById('calc');
+    const wrap = document.getElementById('wrap');
+    wrap.style.height = '170vh';
     calc.style.display = 'block';
     calc.style.animation =
-      'going-up 0.5s forwards, ' +
       'fade-in 0.5s forwards';
-  }, 700);
+  }, 1000);
+
   setTimeout(() => {
-    calc.style.animation = '';
     calc.style.animation =
       'fade-out 0.4s forwards';
     setTimeout(() => {
       calc.style.display = 'none';
-      goResult();
-     
     }, 400);
+    goResult();
   }, 9000);
 }
 
@@ -200,14 +219,6 @@ const begin=()=>{
     footer.style.display = 'none';
     welcome.style.display = 'none';
     qna.style.display = 'block';
-    if (pcMQL.matches) {
-      console.log('PC');
-      wrap.style.marginTop = '50px';
-    } else if (tabletMQL.matches) {
-      console.log('tablet');
-      wrap.style.marginTop = '30px';
-    }
-    console.log(u_name.value);
     goNext();
   }, 2000);
 }
