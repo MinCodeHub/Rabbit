@@ -1,3 +1,4 @@
+
 #result_section {
     display: none;
 }
@@ -55,6 +56,7 @@
     color: aliceblue;
     font-size: 1.4em;
 }
+
 .sub_tit{
     text-align: center;
     width: 100%;
@@ -64,7 +66,7 @@
     color: aliceblue;
     font-size: 0.9em;
 }
- .sub{
+ .sub, .img_click{
     width: 100%;
     height: auto;
     margin:10px auto;
@@ -73,9 +75,12 @@
     font-size: 0.7em;
     text-align: center;
 }
+.sub{
+    line-height: 2;
+}
 
 .share {
-    width: 50%;
+    
     margin: 0 auto;
 
 }
@@ -129,6 +134,9 @@ margin-top: 15px;
 }
 button{
     background: none;
+}
+.returns:hover{
+    background-color: antiquewhite;
 }
 @media all and (min-width:768px) {
     .result_title {

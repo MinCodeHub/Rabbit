@@ -1,9 +1,12 @@
-
+.calc_wrap{
+    height: 90vh;
+}
 #calc {
     margin: 50% auto;
     display : none;
+    height: 50vh;
     opacity: 0;
-    height: 100vh;
+
 }
 .calc-bar{
     position: relative;
@@ -39,7 +42,11 @@
 
     #calc {
         margin: 30% auto;
+        display : none;
+        height: 40vh;
+        opacity: 0;
     }
 }
 @media all and (min-width:1024px) {
+
 }
