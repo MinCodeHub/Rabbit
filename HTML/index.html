@@ -17,10 +17,11 @@
     <link rel="stylesheet" type="text/css" href="../css/calc.css">
     <link rel="stylesheet" type="text/css" href="../css/result.css">
     <link rel="stylesheet" type="text/css" href="../css/animation.css">
-    <link rel="shortcut icon" href="/images/favicon/lion.ico">
-    <link rel="apple-touch-icon-precomposed" href="/images/favicon/lion.ico">
+    <link rel="shortcut icon" href="/images/favicon/love_rabbit.png">
+    <link rel="apple-touch-icon-precomposed" href="/images/favicon/love_rabbit.png">
     <script src="/js/jquery.min.js"></script>
     <script src="/js/share.js"></script>
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
     <style>
 
     </style>
@@ -29,8 +30,7 @@
 <body>
     <div id="wrap">
         <header id="header">
-            <a href="">
-                <button class="logo"></button></a>
+                <button class="logo" title="다크모드"></button>
         </header>
         <section id="welcome" class="container">
             <div class="title">
@@ -85,6 +85,7 @@
                 <h1></h1>
                  <p class="point"></p> 
                  <div class="result_img"></div>
+                 <p class="img_click">(사진을 누르면 해당 토끼의 설명이 나옵니다.)<hr></p>
                  <p class="sub_tit"></p>
                 <p class="sub">
                 </p>
@@ -96,10 +97,9 @@
                 <div class="SNS_icons">
                     <button id="facebook" onclick="fn_sendFB('facebook');"><img src="/images/s_images/facebook.png" title="페이스북"></button>
                     <button id="twitter" onclick="fn_sendFB('twitter');"><img src = "/images/s_images/twitter.png" title="트위터"></button>
-                    <button id="kakao" onclick="fn_sendFB('kakao');"><img src ="/images/s_images/kakaotalk.png" title="카카오톡"></button>
                 </div>
                 <div class="url_share">
-                    <button type ="button" class="url"><p>url 복사하기</p></button>
+                    <button type ="button" class="url"  onclick="copy_url();"><p>url 복사하기</p></button>
                     <a href="index.html"><button class="returns"><p>다시하기</p></button></a>
                 </div>
         </section>
@@ -123,4 +123,5 @@
     <script src="../js/main.js" type="module"></script>
     <script src="../js/data.js" type="module"></script>
     <script src="../js/share.js" type="module"></script>
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 </body>

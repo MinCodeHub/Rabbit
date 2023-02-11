@@ -15,8 +15,8 @@
     <link rel="stylesheet" type="text/css" href="../css/start_page.css">
     <link rel="stylesheet" type="text/css" href="../css/qna.css">
     <link rel="stylesheet" type="text/css" href="../css/result.css">
-    <link rel="shortcut icon" href="/images/favicon/lion.ico">
-    <link rel="apple-touch-icon-precomposed" href="/images/favicon/lion.ico">
+    <link rel="shortcut icon" href="/images/favicon/love_rabbit.png">
+    <link rel="apple-touch-icon-precomposed" href="/images/favicon/love_rabbit.png">
     <script src="/js/jquery.min.js"></script>
     <script src="/js/share.js"></script>
     <style>
@@ -25,11 +25,9 @@
 </head>
 
 <body>
-    <div id="wrap">
-
+    <div id="wrap" class="result_wrap">
         <header id="header">
-            <a href="">
-                <button class="logo"></button></a>
+            <button class="logo" title="다크모드"></button>
         </header>
         <section id="result_section" class="container">
           
@@ -37,6 +35,7 @@
                 <h1>OOO님은 플러팅의 장인.</h1>
                  <p class="point">40점</p> 
                  <div class="result_img"></div>
+                 <p class="img_click">(사진을 누르면 해당 토끼의 설명이 나옵니다.)<hr></p>
                  <p class="sub_tit">겁이 많은 내적관종<br> 라이언헤드</p>
                 <p class="sub"> 상대방이 나를 어떻게 생각할지, 고민거리가 많은 당신..! 
                     <br> 조금만 더 용기를 내어보세요!
@@ -50,10 +49,9 @@
                 <div class="SNS_icons">
                     <button id="facebook" onclick="fn_sendFB('facebook');"><img src="/images/s_images/facebook.png" title="페이스북"></button>
                     <button id="twitter" onclick="fn_sendFB('twitter');"><img src = "/images/s_images/twitter.png" title="트위터"></button>
-                    <button id="kakao" onclick="fn_sendFB('kakao');"><img src ="/images/s_images/kakaotalk.png" title="카카오톡"></button>
                 </div>
                 <div class="url_share">
-                    <button type ="button" class="url"><p>url 복사하기</p></button>
+                    <button type ="button" class="url" onclick="copy_url();"><p>url 복사하기</p></button>
                     <a href="index.html"><button class="returns"><p>다시하기</p></button></a>
                 </div>
         </section>
@@ -69,8 +67,8 @@
             <p class="contact">
                 <span class="contact_me">CONTACT ME: gjalsdud1030@naver.com</span>
             </p>
-
         </footer>
     </div>
     <script src="/js/share.js" type="module"></script>
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 </body>
