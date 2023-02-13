@@ -8,7 +8,7 @@
 
 ### 개발일지<br>
 <Notion> <br>
-https://www.notion.so/2023-3a84f4e7f28b4d3ab340004b91c392db
+https://www.notion.so/2023-3a84f4e7f28b4d3ab340004b91c392db?pvs=4
 
 ---
 reference: [김다인](https://dev-dain.tistory.com)  
