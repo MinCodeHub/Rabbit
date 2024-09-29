@@ -7,7 +7,7 @@
 ![demo](https://user-images.githubusercontent.com/80152716/218378844-aa94fe10-423b-4925-8fc4-eaa340a52243.png) <br>
 
 ### 프로젝트 영상<br>
-
+![alt text](demo/demo.gif)
 
 ### 배포 후 주변인들의 반응 <br>
 
